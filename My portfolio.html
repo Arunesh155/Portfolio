@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arunesh's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    header {
+        background: #333;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    nav ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    #about {
+        background: #f4f4f4;
+        padding: 50px 0;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        max-width: 800px;
+        text-align: left;
+    }
+
+    #projects .project {
+        margin: 20px 0;
+    }
+
+    #contact {
+        background: #f4f4f4;
+        padding: 50px 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label,
+    input,
+    textarea,
+    button {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #555;
+    }
+
+    footer {
+        background: #333;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Arunesh S</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="C:\Users\yuvar\Documents\Ar.jpg" alt="Your Name" class="profile-photo">
+                <div class="about-text">
+                    <p>Hello! I'm Arunesh, a Computer Science and Engineering student at Kongu Engineering College. My
+                        passion lies in understanding the technology and applying this knowledge to create innovative
+                        solutions.</p>
+                    <p>I have a strong foundation in programming languages such as Python, Java,C, and C++, and I am
+                        proficient in web technologies like HTML, CSS, and JavaScript. My coursework has equipped me
+                        with skills in software development, data structures, algorithms, and systems design.</p>
+                    <p>During my studies, I have worked on various projects e.g., web development, hardware projects.
+                        These projects have helped me develop a problem-solving mindset and the ability to work
+                        effectively in a team.</p>
+                    <p>Outside of academics, I am involved in various club activities. I also enjoy participating in
+                        hackathons and coding competitions to challenge myself and learn new skills.</p>
+                    <p>In my free time, I like to watch tech vlogs. I am excited about the future of technology and am
+                        eager to contribute to impactful projects in the tech industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <h4>TOPIC: Pinpoint Saver</h4>
+                <p>PinPoint Saver is a revolutionary sensor application designed to enhance road safety, especially in
+                    hilly terrains prone to accidents. Leveraging advanced sensor technologies and real-time data
+                    processing, PinPoint Saver detects road accidents as they occur and swiftly alerts the appropriate
+                    emergency response teams.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <h4>TOPIC: Hostel Management System</h4>
+                <p>The Hostel Management System is a comprehensive web application designed to streamline the management
+                    of hostel operations. It provides a centralized platform for administrators, staff, and students to
+                    efficiently handle various aspects of hostel life, from room allocation and maintenance requests to
+                    fee management and announcements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('Thank you for your message!');
+                document.getElementById('contact-form').reset();
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
+</body>
+
+</html>
